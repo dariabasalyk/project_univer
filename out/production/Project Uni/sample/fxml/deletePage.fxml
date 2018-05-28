@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="915.0" prefWidth="1273.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controllers.DeletePageController">
+  <tabs>
+    <Tab fx:id="computerTab" text="Редагувати computer">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <TableView fx:id="computerTableView" layoutX="14.0" layoutY="14.0" prefHeight="258.0" prefWidth="1233.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="id" fx:id="computer_id" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="119.0" text="computer_name" fx:id="computer_name" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="117.0" text="computer_type" fx:id="computer_type" />
+                <TableColumn prefWidth="75.0" text="cpu_id" fx:id="computer_cpu_id" />
+                <TableColumn prefWidth="75.0" text="hdd_id" fx:id="computer_hdd_id" />
+                <TableColumn prefWidth="75.0" text="housing_id" fx:id="computer_housing_id" />
+                <TableColumn prefWidth="75.0" text="mother_board_id" fx:id="computer_mother_board_id" />
+                <TableColumn prefWidth="75.0" text="ram_id" fx:id="computer_ram_id" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="111.0" text="video_card_id" fx:id="computer_video_card_id" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="137.0" text="computer_mouse_id" fx:id="computer_mouse_id" />
+                <TableColumn prefWidth="75.0" text="modem_id" fx:id="modem_id" />
+                <TableColumn prefWidth="75.0" text="printer_id" fx:id="printer_id" />
+                <TableColumn prefWidth="75.0" text="guarantee" fx:id="computer_guarantee" />
+                <TableColumn prefWidth="75.0" text="price" fx:id="computer_price" />
+              </columns>
+            </TableView>
+            <Button layoutX="580.0" layoutY="272.0" mnemonicParsing="false" text="Показати записи" onAction="#showComputer" />
+            <Label layoutX="14.0" layoutY="293.0" text="Введіть id товару який слід видлити" />
+            <TextField fx:id="computer_deleteID" layoutX="14.0" layoutY="309.0" prefWidth="200.0" />
+            <Button layoutX="214.0" layoutY="309.0" mnemonicParsing="false" text="Видалити" onAction="#deleteComputer" />
+            <Label layoutX="574.0" layoutY="323.0" text="Додати новий товар" />
+            <TextField fx:id="add_computer_name" layoutX="14.0" layoutY="371.0" prefWidth="107.0" />
+            <TextField fx:id="add_computer_type" layoutX="121.0" layoutY="371.0" prefWidth="89.0" />
+            <TextField id="add_cpu_id" fx:id="add_computer_cpu_id" layoutX="210.0" layoutY="371.0" prefWidth="56.0" />
+            <TextField id="add_hdd_id" fx:id="add_computer_hdd_id" layoutX="266.0" layoutY="371.0" prefWidth="73.0" />
+            <TextField id="add_housing_id" fx:id="add_computer_housing_id" layoutX="339.0" layoutY="371.0" prefWidth="96.0" />
+            <TextField id="add_mb_id" fx:id="add_computer_mb_id" layoutX="435.0" layoutY="371.0" prefWidth="96.0" />
+            <TextField id="add_ram_id" fx:id="add_computer_ram_id" layoutX="531.0" layoutY="371.0" prefWidth="89.0" />
+            <TextField id="add_vc_id" fx:id="add_computer_vc_id" layoutX="620.0" layoutY="371.0" prefWidth="89.0" />
+            <TextField id="add_mouse_id" fx:id="add_computer_mouse_id" layoutX="709.0" layoutY="371.0" prefWidth="96.0" />
+            <TextField id="add_modem_id" fx:id="add_computer_modem_id" layoutX="805.0" layoutY="371.0" prefWidth="80.0" />
+            <TextField id="add_printer_id" fx:id="add_computer_printer_id" layoutX="885.0" layoutY="371.0" prefWidth="96.0" />
+            <TextField fx:id="add_computer_guarantee" layoutX="981.0" layoutY="371.0" prefWidth="80.0" />
+            <TextField fx:id="add_computer_price" layoutX="1059.0" layoutY="371.0" prefWidth="73.0" />
+            <Label layoutX="14.0" layoutY="355.0" text="computer_name" />
+            <Label layoutX="121.0" layoutY="355.0" text="computer_type" />
+            <Label layoutX="214.0" layoutY="355.0" text="cpu_id" />
+            <Label layoutX="270.0" layoutY="355.0" text="hdd_id" />
+            <Label layoutX="339.0" layoutY="355.0" text="housing_id" />
+            <Label layoutX="435.0" layoutY="352.0" text="mb_id" />
+            <Label layoutX="531.0" layoutY="355.0" text="ram_id" />
+            <Label layoutX="620.0" layoutY="355.0" text="vc_id" />
+            <Label layoutX="709.0" layoutY="358.0" text="mouse_id" />
+            <Label layoutX="805.0" layoutY="355.0" text="modem_id" />
+            <Label layoutX="885.0" layoutY="355.0" text="printer_id" />
+            <Label layoutX="981.0" layoutY="355.0" text="guarantee" />
+            <Label layoutX="1061.0" layoutY="358.0" text="price" />
+            <Label layoutX="589.0" layoutY="426.0" text="Оновити товар" />
+            <Label layoutX="27.0" layoutY="455.0" text="Виберіть поле яке слід оновити, введіть його id та нове значення" />
+            <Label layoutX="29.0" layoutY="503.0" text="ID" />
+            <Label layoutX="149.0" layoutY="503.0" text="Нове значення" />
+            <Button layoutX="580.0" layoutY="405.0" mnemonicParsing="false" text="Додати товар" onAction="#addComputer" />
+            <Button layoutX="27.0" layoutY="563.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="360.0" text="Оновити товар" onAction="#updateComputer" />
+            <ChoiceBox fx:id="updateComputer" layoutX="29.0" layoutY="482.0" prefWidth="360.0">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ChoiceBox>
+            <TextField fx:id="updateCoputerField" layoutX="27.0" layoutY="529.0" prefWidth="113.0" />
+            <TextField fx:id="computerNewValue" layoutX="140.0" layoutY="529.0" prefWidth="245.0" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="cpuTab" text="Редагувати CPU">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="874.0" prefWidth="1294.0">
+          <children>
+            <Button layoutX="567.0" layoutY="331.0" mnemonicParsing="false" onAction="#showCpu" prefHeight="31.0" prefWidth="152.0" text="Показати записи" />
+            <Button layoutX="269.0" layoutY="379.0" mnemonicParsing="false" onAction="#deleteCpu" prefHeight="31.0" prefWidth="152.0" text="Видалити" />
+            <TableView fx:id="cpuTableView" layoutX="14.0" layoutY="14.0" prefHeight="309.0" prefWidth="1256.0">
+              <columns>
+                <TableColumn prefWidth="33.0" text="id" fx:id="id" />
+                <TableColumn prefWidth="146.0" text="cpu_name" fx:id="name" />
+                <TableColumn prefWidth="119.0" text="connector_type" fx:id="connector" />
+                <TableColumn prefWidth="145.0" text="numbers_of_cores" fx:id="number_of_cores" />
+                <TableColumn minWidth="0.0" prefWidth="141.0" text="iternal_clock_rate" fx:id="iteranal_clock_rate" />
+                <TableColumn prefWidth="183.0" text="the_unlocked_multiplier" fx:id="the_unlocked_multiplier" />
+                <TableColumn minWidth="0.0" prefWidth="89.0" text="frequency" fx:id="freaquncy" />
+                <TableColumn minWidth="0.0" prefWidth="149.0" text="number_of_contacts" fx:id="number_of_contacts" />
+                <TableColumn minWidth="0.0" prefWidth="48.0" text="TDP" fx:id="TDP" />
+                <TableColumn minWidth="0.0" prefWidth="53.0" text="kernel" fx:id="kernel" />
+                <TableColumn minWidth="0.0" prefWidth="79.0" text="guarantee" fx:id="guarantee" />
+                <TableColumn prefWidth="71.0" text="price" fx:id="price" />
+              </columns>
+            </TableView>
+            <TextField fx:id="textField" layoutX="12.0" layoutY="379.0" prefHeight="31.0" prefWidth="257.0" />
+            <Label layoutX="12.0" layoutY="362.0" text="Введіть id товару, який слід видалити" />
+            <Label layoutX="560.0" layoutY="395.0" text="Додати новий товар" />
+            <Label layoutX="36.0" layoutY="419.0" text="cpu name" />
+            <Label layoutX="147.0" layoutY="419.0" text="connector type" />
+            <Label layoutX="269.0" layoutY="419.0" text="numbers of cores" />
+            <Label layoutX="399.0" layoutY="419.0" text="iternal clock rate" />
+            <Label layoutX="537.0" layoutY="419.0" text="the unlocked multiplier" />
+            <Label layoutX="736.0" layoutY="419.0" text="frequency" />
+            <Label layoutX="808.0" layoutY="419.0" text="number of contacts" />
+            <Label layoutX="959.0" layoutY="419.0" text="TDP" />
+            <Label layoutX="1011.0" layoutY="419.0" text="kernel" />
+            <Label layoutX="1095.0" layoutY="419.0" text="guarantee" />
+            <Label layoutX="1200.0" layoutY="419.0" text="price" />
+            <TextField fx:id="add_cpu_name" layoutX="16.0" layoutY="436.0" prefHeight="31.0" prefWidth="100.0" />
+            <TextField fx:id="add_cpu_connector_type" layoutX="115.0" layoutY="437.0" prefHeight="30.0" prefWidth="136.0" />
+            <TextField fx:id="add_cpu_numbers_of_cores" layoutX="256.0" layoutY="436.0" prefHeight="31.0" prefWidth="131.0" />
+            <TextField fx:id="add_cpu_iternal_clock_rate" layoutX="391.0" layoutY="436.0" prefHeight="31.0" prefWidth="129.0" />
+            <TextField fx:id="add_cpu_the_unlocked_multiplier" layoutX="531.0" layoutY="436.0" prefHeight="31.0" prefWidth="171.0" />
+            <TextField fx:id="add_cpu_frequency" layoutX="702.0" layoutY="436.0" prefHeight="31.0" prefWidth="106.0" />
+            <TextField fx:id="add_cpu_number_of_contacts" layoutX="808.0" layoutY="436.0" prefHeight="31.0" prefWidth="138.0" />
+            <TextField fx:id="add_cpu_TDP" layoutX="950.0" layoutY="436.0" prefHeight="31.0" prefWidth="40.0" />
+            <TextField fx:id="add_cpu_kernel" layoutX="990.0" layoutY="436.0" prefHeight="31.0" prefWidth="94.0" />
+            <TextField fx:id="add_cpu_guarantee" layoutX="1085.0" layoutY="436.0" prefHeight="31.0" prefWidth="99.0" />
+            <TextField fx:id="add_cpu_price" layoutX="1184.0" layoutY="436.0" prefHeight="31.0" prefWidth="107.0" />
+            <Button layoutX="590.0" layoutY="467.0" mnemonicParsing="false" onAction="#addCpu" text="Додати товар" />
+            <Label layoutX="596.0" layoutY="488.0" text="Оновити товар" />
+            <ChoiceBox fx:id="updateCpu" layoutX="16.0" layoutY="520.0" prefHeight="31.0" prefWidth="343.0" />
+            <Label layoutX="27.0" layoutY="504.0" text="Виберіть поле яке слід оновити, введіть його id та нове значення" />
+            <TextField fx:id="updateCpuField" layoutX="11.0" layoutY="567.0" prefHeight="31.0" prefWidth="156.0" />
+            <Button layoutX="14.0" layoutY="598.0" mnemonicParsing="false" onAction="#updateCPU" prefHeight="31.0" prefWidth="344.0" text="Оновити" />
+            <Label layoutX="66.0" layoutY="551.0" text="ID" />
+            <Label layoutX="232.0" layoutY="551.0" text="Нове значення" />
+            <TextField fx:id="cpu_new_value" layoutX="167.0" layoutY="567.0" prefHeight="31.0" prefWidth="178.0" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Редагувати HDD">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <TableView fx:id="hddTableView" layoutX="14.0" layoutY="14.0" prefHeight="252.0" prefWidth="1260.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="id" fx:id="hdd_id" />
+                <TableColumn prefWidth="154.0" text="hdd_name" fx:id="hdd_name" />
+                <TableColumn prefWidth="145.0" text="capasity_hdd" fx:id="hdd_capacity" />
+                <TableColumn prefWidth="133.0" text="interface" fx:id="hdd_interface" />
+                <TableColumn prefWidth="251.0" text="the_volume_of_buffer" fx:id="hdd_volume" />
+                <TableColumn prefWidth="170.0" text="the_data_rate" fx:id="hdd_data_rate" />
+                <TableColumn prefWidth="116.0" text="guarantee" fx:id="hdd_guarantee" />
+                <TableColumn prefWidth="215.0" text="price" fx:id="hdd_price" />
+              </columns>
+            </TableView>
+            <Button layoutX="551.0" layoutY="266.0" mnemonicParsing="false" onAction="#showHdd" prefHeight="31.0" prefWidth="154.0" text="Показати записи" />
+            <Button layoutX="262.0" layoutY="313.0" mnemonicParsing="false" onAction="#deleteHdd" prefHeight="31.0" prefWidth="107.0" text="Видалити" />
+            <TextField fx:id="hdd_deleteID" layoutX="4.0" layoutY="313.0" prefHeight="31.0" prefWidth="258.0" />
+            <Label layoutX="14.0" layoutY="297.0" text="Введіть id товару, який слід видалити" />
+            <Label layoutX="518.0" layoutY="328.0" text="Додати новий товар" />
+            <Label layoutX="79.0" layoutY="344.0" text="hdd name" />
+            <Label layoutX="179.0" layoutY="347.0" text="capasity hdd" />
+            <Label layoutX="346.0" layoutY="344.0" text="interface" />
+            <Label layoutX="464.0" layoutY="344.0" text="the volume of buffer" />
+            <Label layoutX="627.0" layoutY="347.0" text="the data rate" />
+            <Label layoutX="756.0" layoutY="344.0" text="guarantee" />
+            <Label layoutX="888.0" layoutY="341.0" text="price" />
+            <TextField fx:id="add_hdd_name" layoutX="14.0" layoutY="360.0" />
+            <TextField fx:id="add_hdd_capacity" layoutX="158.0" layoutY="360.0" />
+            <TextField fx:id="add_hdd_interface" layoutX="302.0" layoutY="360.0" />
+            <TextField fx:id="add_hdd_volume" layoutX="447.0" layoutY="360.0" />
+            <TextField fx:id="add_hdd_data_rate" layoutX="589.0" layoutY="360.0" />
+            <TextField fx:id="add_hdd_guarantee" layoutX="727.0" layoutY="360.0" prefHeight="21.0" prefWidth="142.0" />
+            <TextField fx:id="add_hdd_price" layoutX="869.0" layoutY="360.0" prefHeight="21.0" prefWidth="177.0" />
+            <Button layoutX="579.0" layoutY="381.0" mnemonicParsing="false" onAction="#addHdd" text="Додати товар" />
+            <Label layoutX="579.0" layoutY="402.0" text="Оновити товар" />
+            <Label layoutX="14.0" layoutY="418.0" text="Виберіть поле яке слід оновити, введіть його id та нове значення" />
+            <ChoiceBox fx:id="updateHdd" layoutX="14.0" layoutY="434.0" prefHeight="31.0" prefWidth="342.0" />
+            <Label layoutX="67.0" layoutY="465.0" text="ID" />
+            <Label layoutX="233.0" layoutY="465.0" text="Нове значення" />
+            <TextField fx:id="updateHddField" layoutX="14.0" layoutY="481.0" prefHeight="31.0" prefWidth="164.0" />
+            <TextField fx:id="hdd_new_value" layoutX="178.0" layoutY="481.0" prefHeight="31.0" prefWidth="181.0" />
+            <Button layoutX="14.0" layoutY="512.0" mnemonicParsing="false" onAction="#updateHDD" prefHeight="31.0" prefWidth="345.0" text="Оновити" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Редагувати Housing">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <TableView fx:id="housingTableView" layoutX="14.0" layoutY="14.0" prefHeight="254.0" prefWidth="1261.0">
+              <columns>
+                <TableColumn prefWidth="81.0" text="id" fx:id="housing_id" />
+                <TableColumn prefWidth="321.0" text="housing_name" fx:id="housing_name" />
+                <TableColumn prefWidth="327.0" text="housing_material" fx:id="housing_material" />
+                <TableColumn prefWidth="195.0" text="type_of_housing" fx:id="type_of_housing" />
+                <TableColumn prefWidth="107.0" text="guarantee" fx:id="housing_guarantee" />
+                <TableColumn prefWidth="226.0" text="price" fx:id="housing_price" />
+              </columns>
+            </TableView>
+            <Button layoutX="547.0" layoutY="268.0" mnemonicParsing="false" onAction="#showHousing" prefHeight="31.0" prefWidth="173.0" text="Показати записи" />
+            <Button layoutX="272.0" layoutY="315.0" mnemonicParsing="false" onAction="#deleteHousing" prefHeight="31.0" prefWidth="132.0" text="Видалити" />
+            <TextField fx:id="delete_housingID" layoutX="14.0" layoutY="315.0" prefHeight="31.0" prefWidth="258.0" />
+            <Label layoutX="14.0" layoutY="299.0" text="Введіть id товару, який слід видалити" />
+            <Label layoutX="562.0" layoutY="346.0" text="Додати новий товар" />
+            <Label layoutX="14.0" layoutY="362.0" text="housing name" />
+            <Label layoutX="183.0" layoutY="362.0" text="housing material" />
+            <Label layoutX="332.0" layoutY="362.0" text="type of housing" />
+            <Label layoutX="470.0" layoutY="362.0" text="guarantee" />
+            <Label layoutX="621.0" layoutY="362.0" text="price" />
+            <TextField fx:id="add_housing_name" layoutX="14.0" layoutY="378.0" />
+            <TextField fx:id="add_housing_material" layoutX="159.0" layoutY="378.0" />
+            <TextField fx:id="add_housing_type" layoutX="301.0" layoutY="378.0" />
+            <TextField fx:id="add_housing_guarantee" layoutX="440.0" layoutY="378.0" />
+            <TextField fx:id="add_housing_price" layoutX="585.0" layoutY="378.0" />
+            <Button layoutX="579.0" layoutY="400.0" mnemonicParsing="false" onAction="#addHousing" text="Додати товар" />
+            <Label layoutX="585.0" layoutY="421.0" text="Оновити товар" />
+            <Label layoutX="14.0" layoutY="434.0" text="Виберіть поле яке слід оновити, введіть його id та нове значення" />
+            <ChoiceBox fx:id="updateHousing" layoutX="11.0" layoutY="450.0" prefHeight="31.0" prefWidth="345.0" />
+            <Label layoutX="78.0" layoutY="481.0" text="ID" />
+            <Label layoutX="228.0" layoutY="481.0" text="Нове значення" />
+            <Button layoutX="14.0" layoutY="528.0" mnemonicParsing="false" onAction="#updateHousing" prefHeight="31.0" prefWidth="343.0" text="Оновити" />
+            <TextField fx:id="updateHousingField" layoutX="10.0" layoutY="497.0" prefHeight="31.0" prefWidth="176.0" />
+            <TextField fx:id="housing_new_value" layoutX="183.0" layoutY="497.0" prefHeight="31.0" prefWidth="169.0" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Редагувати Mother board">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <TableView fx:id="motherBoardTableView" layoutX="14.0" layoutY="14.0" prefHeight="264.0" prefWidth="1260.0">
+              <columns>
+                <TableColumn prefWidth="47.0" text="id" fx:id="mb_id" />
+                <TableColumn prefWidth="280.0" text="mother_board_name" fx:id="mb_name" />
+                <TableColumn prefWidth="200.0" text="connector_type" fx:id="mb_connector" />
+                <TableColumn prefWidth="213.0" text="chipset" fx:id="mb_chipset" />
+                <TableColumn prefWidth="211.0" text="phisical_dimensions" fx:id="mb_dimensions" />
+                <TableColumn prefWidth="149.0" text="guarantee" fx:id="mb_guarantee" />
+                <TableColumn prefWidth="159.0" text="price" fx:id="mb_price" />
+              </columns>
+            </TableView>
+            <Button layoutX="580.0" layoutY="278.0" mnemonicParsing="false" onAction="#showMB" text="Показасити записи" />
+            <Button layoutX="272.0" layoutY="315.0" mnemonicParsing="false" onAction="#deleteMB" prefHeight="31.0" prefWidth="95.0" text="Видалити" />
+            <TextField fx:id="mb_deleteID" layoutX="14.0" layoutY="315.0" prefHeight="31.0" prefWidth="258.0" />
+            <Label layoutX="10.0" layoutY="299.0" text="Введіть id товару, який слід видалити" />
+            <Label layoutX="575.0" layoutY="346.0" text="Додати новий товар" />
+            <Label layoutX="14.0" layoutY="362.0" text="mother board name" />
+            <Label layoutX="194.0" layoutY="362.0" text="connector type" />
+            <Label layoutX="320.0" layoutY="359.0" text="chipset" />
+            <Label layoutX="472.0" layoutY="362.0" text="phisical dimensions" />
+            <Label layoutX="628.0" layoutY="362.0" text="guarantee" />
+            <Label layoutX="767.0" layoutY="359.0" text="price" />
+            <TextField fx:id="add_mb_name" layoutX="14.0" layoutY="378.0" />
+            <TextField fx:id="add_mb_connector" layoutX="158.0" layoutY="378.0" />
+            <TextField fx:id="add_mb_chipset" layoutX="302.0" layoutY="378.0" />
+            <TextField fx:id="add_mb_dimensions" layoutX="447.0" layoutY="378.0" />
+            <TextField fx:id="add_mb_guarantee" layoutX="592.0" layoutY="378.0" />
+            <TextField fx:id="add_mb_price" layoutX="737.0" layoutY="378.0" />
+            <Button layoutX="580.0" layoutY="400.0" mnemonicParsing="false" onAction="#addMB" text="Додати товар" />
+            <Label layoutX="580.0" layoutY="421.0" text="Оновити товар" />
+            <Label layoutX="12.0" layoutY="437.0" text="Виберіть поле яке слід оновити, введіть його id та нове значення" />
+            <ChoiceBox fx:id="updateMB" layoutX="10.0" layoutY="453.0" prefHeight="31.0" prefWidth="344.0" />
+            <Label layoutX="81.0" layoutY="484.0" text="ID" />
+            <Label layoutX="220.0" layoutY="487.0" text="Нове значення" />
+            <TextField fx:id="updateMBField" layoutX="12.0" layoutY="503.0" prefHeight="31.0" prefWidth="173.0" />
+            <TextField fx:id="mb_new_value" layoutX="186.0" layoutY="503.0" prefHeight="31.0" prefWidth="169.0" />
+            <Button layoutX="10.0" layoutY="534.0" mnemonicParsing="false" onAction="#updateMb" prefHeight="31.0" prefWidth="343.0" text="Оновити" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Редагувати Ram">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <TableView fx:id="ramTableView" layoutX="14.0" layoutY="14.0" prefHeight="268.0" prefWidth="1261.0">
+              <columns>
+                <TableColumn prefWidth="65.0" text="id" fx:id="ram_id" />
+                <TableColumn prefWidth="197.0" text="ram_name" fx:id="ram_name" />
+                <TableColumn prefWidth="98.0" text="memory_size" fx:id="ram_memory_size" />
+                <TableColumn prefWidth="149.0" text="type_of_memory" fx:id="ram_type_of_memory" />
+                <TableColumn prefWidth="119.0" text="supply_voltage" fx:id="ram_supply_voltage" />
+                <TableColumn prefWidth="154.0" text="memory_frequency" fx:id="ram_memory_frequency" />
+                <TableColumn prefWidth="155.0" text="effective_bandwidth" fx:id="ram_bandwidth" />
+                <TableColumn prefWidth="133.0" text="number_of_strips" fx:id="ram_number_of_strips" />
+                <TableColumn prefWidth="90.0" text="guarantee" fx:id="ram_guarantee" />
+                <TableColumn prefWidth="96.0" text="price" fx:id="ram_price" />
+              </columns>
+            </TableView>
+            <Button layoutX="567.0" layoutY="282.0" mnemonicParsing="false" onAction="#showRam" prefHeight="31.0" prefWidth="155.0" text="Показати записи" />
+            <Button layoutX="268.0" layoutY="334.0" mnemonicParsing="false" onAction="#deleteRam" text="Видалити" />
+            <TextField fx:id="delete_ramID" layoutX="14.0" layoutY="329.0" prefHeight="31.0" prefWidth="255.0" />
+            <Label layoutX="14.0" layoutY="313.0" text="Введіть id товару, який слід видалити" />
+            <Label layoutX="580.0" layoutY="352.0" text="Додати новий товар" />
+            <Label layoutX="29.0" layoutY="368.0" text="ram name" />
+            <Label layoutX="160.0" layoutY="365.0" text="memory size" />
+            <Label layoutX="255.0" layoutY="360.0" text="type of memory" />
+            <Label layoutX="419.0" layoutY="365.0" text="supply voltage" />
+            <Label layoutX="713.0" layoutY="371.0" text="effective bandwidth" />
+            <Label layoutX="577.0" layoutY="368.0" text="memory_frequency" />
+            <Label layoutX="871.0" layoutY="368.0" text="number of strips" />
+            <Label layoutX="990.0" layoutY="371.0" text="guarantee" />
+            <Label layoutX="1128.0" layoutY="368.0" text="price" />
+            <TextField fx:id="add_ram_name" layoutX="12.0" layoutY="384.0" prefHeight="31.0" prefWidth="136.0" />
+            <TextField fx:id="add_ram_memory_size" layoutX="144.0" layoutY="384.0" prefHeight="31.0" prefWidth="87.0" />
+            <TextField fx:id="add_ram_type_of_memory" layoutX="231.0" layoutY="384.0" prefHeight="31.0" prefWidth="155.0" />
+            <TextField fx:id="add_ram_voltage" layoutX="382.0" layoutY="384.0" prefHeight="31.0" prefWidth="153.0" />
+            <TextField fx:id="add_ram_frequency" layoutX="535.0" layoutY="384.0" prefHeight="31.0" prefWidth="154.0" />
+            <TextField fx:id="add_ram_bandwidth" layoutX="684.0" layoutY="384.0" prefHeight="31.0" prefWidth="163.0" />
+            <TextField fx:id="add_ram_number_of_strips" layoutX="847.0" layoutY="384.0" prefHeight="31.0" prefWidth="130.0" />
+            <TextField fx:id="add_ram_guarantee" layoutX="975.0" layoutY="384.0" prefHeight="31.0" prefWidth="138.0" />
+            <TextField fx:id="add_ram_price" layoutX="1113.0" layoutY="384.0" prefHeight="31.0" prefWidth="144.0" />
+            <Button layoutX="589.0" layoutY="421.0" mnemonicParsing="false" onAction="#addRam" text="Додати товар" />
+            <Label layoutX="596.0" layoutY="442.0" text="Оновити товар" />
+            <Label layoutX="14.0" layoutY="458.0" text="Виберіть поле яке слід оновити, введіть його id та нове значення" />
+            <ChoiceBox fx:id="updateRam" layoutX="12.0" layoutY="474.0" prefHeight="31.0" prefWidth="346.0" />
+            <Label layoutX="56.0" layoutY="505.0" text="ID" />
+            <Label layoutX="214.0" layoutY="505.0" text="Нове значення" />
+            <TextField fx:id="updateRamField" layoutX="14.0" layoutY="521.0" prefHeight="31.0" prefWidth="146.0" />
+            <TextField fx:id="ram_new_value" layoutX="156.0" layoutY="521.0" prefHeight="31.0" prefWidth="199.0" />
+            <Button mnemonicParsing="false" text="Button" />
+            <Button layoutX="14.0" layoutY="552.0" mnemonicParsing="false" onAction="#updateRAM" prefHeight="31.0" prefWidth="346.0" text="Оновити" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Редагувати Video card">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <TableView fx:id="videoCardTableView" layoutX="14.0" layoutY="14.0" prefHeight="219.0" prefWidth="1258.0">
+              <columns>
+                <TableColumn prefWidth="52.0" text="id" fx:id="vc_id" />
+                <TableColumn prefWidth="132.0" text="video_name" fx:id="vc_name" />
+                <TableColumn prefWidth="218.0" text="the_graphic_chip" fx:id="vc_graphics_chip" />
+                <TableColumn prefWidth="143.0" text="memory_frequency" fx:id="vc_memory_frequency" />
+                <TableColumn text="core clock" fx:id="vc_core_clock" />
+                <TableColumn prefWidth="111.0" text="memory size" fx:id="vc_memory_size" />
+                <TableColumn prefWidth="130.0" text="bit memory bus" fx:id="vc_bit_memory_bus" />
+                <TableColumn prefWidth="130.0" text="type of memory" fx:id="vc_type_of_memory" />
+                <TableColumn prefWidth="132.0" text="guarantee" fx:id="vc_guarantee" />
+                <TableColumn prefWidth="129.0" text="price" fx:id="vc_price" />
+              </columns>
+            </TableView>
+            <Button layoutX="577.0" layoutY="233.0" mnemonicParsing="false" onAction="#showVC" text="Показати записи" />
+            <Button layoutX="272.0" layoutY="275.0" mnemonicParsing="false" onAction="#deleteVC" text="Видалити" />
+            <TextField fx:id="delete_vcID" layoutX="13.0" layoutY="270.0" prefHeight="31.0" prefWidth="256.0" />
+            <Label layoutX="14.0" layoutY="254.0" text="Введіть id товару, який слід видалити" />
+            <Label layoutX="561.0" layoutY="301.0" text="Додати новий товар" />
+            <Label layoutX="13.0" layoutY="317.0" text="vide card name" />
+            <Label layoutX="151.0" layoutY="320.0" text="the graphic chip" />
+            <Label layoutX="330.0" layoutY="320.0" text="memory frequency" />
+            <Label layoutX="461.0" layoutY="317.0" text="core clock" />
+            <Label layoutX="576.0" layoutY="314.0" text="memory size" />
+            <Label layoutX="681.0" layoutY="317.0" text="bit memory bus" />
+            <Label layoutX="824.0" layoutY="314.0" text="type of memory" />
+            <Label layoutX="1020.0" layoutY="314.0" text="guarantee" />
+            <Label layoutX="1178.0" layoutY="317.0" text="price" />
+            <TextField fx:id="add_vc_name" layoutX="13.0" layoutY="333.0" prefHeight="31.0" prefWidth="127.0" />
+            <TextField fx:id="add_vc_graphics_chip" layoutX="140.0" layoutY="333.0" prefHeight="31.0" prefWidth="174.0" />
+            <TextField fx:id="add_vc_frequency" layoutX="314.0" layoutY="333.0" prefHeight="31.0" prefWidth="130.0" />
+            <TextField fx:id="add_vc_core_clock" layoutX="444.0" layoutY="333.0" prefHeight="31.0" prefWidth="96.0" />
+            <TextField fx:id="add_vc_memory_size" layoutX="540.0" layoutY="333.0" prefHeight="31.0" prefWidth="125.0" />
+            <TextField fx:id="add_vc_bit_memory_bus" layoutX="665.0" layoutY="333.0" prefHeight="31.0" prefWidth="156.0" />
+            <TextField fx:id="add_vc_type_of_memory" layoutX="821.0" layoutY="333.0" prefHeight="31.0" prefWidth="156.0" />
+            <TextField fx:id="add_vc_guarantee" layoutX="977.0" layoutY="333.0" prefHeight="31.0" prefWidth="125.0" />
+            <TextField fx:id="add_vc_price" layoutX="1102.0" layoutY="333.0" prefHeight="31.0" prefWidth="136.0" />
+            <Button layoutX="579.0" layoutY="364.0" mnemonicParsing="false" onAction="#addVC" text="Додати товар" />
+            <Label layoutX="582.0" layoutY="385.0" text="Оновити товар" />
+            <Label layoutX="14.0" layoutY="401.0" text="Виберіть поле яке слід оновити, введіть його id та нове значення" />
+            <ChoiceBox fx:id="updateVc" layoutX="13.0" layoutY="427.0" prefHeight="31.0" prefWidth="346.0" />
+            <Label layoutX="71.0" layoutY="465.0" text="ID" />
+            <Label layoutX="239.0" layoutY="462.0" text="Нове значення" />
+            <TextField fx:id="updateVCField" layoutX="13.0" layoutY="481.0" prefHeight="31.0" prefWidth="161.0" />
+            <TextField fx:id="vc_new_value" layoutX="174.0" layoutY="481.0" prefHeight="31.0" prefWidth="174.0" />
+            <Button layoutX="11.0" layoutY="512.0" mnemonicParsing="false" onAction="#updateVC" prefHeight="31.0" prefWidth="350.0" text="Оновити" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Редагувати інші товари">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <TableView fx:id="peripheryTableView" layoutX="14.0" layoutY="14.0" prefHeight="283.0" prefWidth="1258.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="id" fx:id="periphery_id" />
+                <TableColumn prefWidth="219.99998474121094" text="name" fx:id="periphery_name" />
+                <TableColumn prefWidth="537.0" text="description" fx:id="periphery_description" />
+                <TableColumn prefWidth="208.0" text="guarantee" fx:id="periphery_guarantee" />
+                <TableColumn prefWidth="219.0" text="price" fx:id="periphery_price" />
+              </columns>
+            </TableView>
+            <Button layoutX="575.0" layoutY="304.0" mnemonicParsing="false" onAction="#showPeriphery" text="Показати записи" />
+            <Label layoutX="14.0" layoutY="335.0" text="Введіть id товару, який слід видалити" />
+            <TextField fx:id="deletePeriphery" layoutX="14.0" layoutY="356.0" prefHeight="31.0" prefWidth="257.0" />
+            <Button layoutX="271.0" layoutY="356.0" mnemonicParsing="false" onAction="#deletePeriphery" text="Видалити" />
+            <Label layoutX="573.0" layoutY="387.0" text="Додати новий товар" />
+            <TextField fx:id="add_periphery_name" layoutX="14.0" layoutY="430.0" />
+            <TextField fx:id="add_periphery_desription" layoutX="202.0" layoutY="430.0" />
+            <TextField fx:id="add_periphery_guarantee" layoutX="389.0" layoutY="430.0" />
+            <TextField fx:id="add_periphery_price" layoutX="575.0" layoutY="430.0" />
+            <Label layoutX="89.0" layoutY="409.0" text="name" />
+            <Label layoutX="258.0" layoutY="409.0" text="description" />
+            <Label layoutX="448.0" layoutY="409.0" text="guarantee" />
+            <Label layoutX="652.0" layoutY="409.0" text="price" />
+            <Button layoutX="580.0" layoutY="461.0" mnemonicParsing="false" onAction="#addPeriphery" text="Додати товар" />
+            <Label layoutX="585.0" layoutY="492.0" text="Оновити товар" />
+            <Label layoutX="14.0" layoutY="513.0" text="Виберіть поле яке слід оновити, введіть його id та нове значення" />
+            <ChoiceBox fx:id="updatePeriphery" layoutX="14.0" layoutY="534.0" prefHeight="31.0" prefWidth="346.0" />
+            <Label layoutX="119.0" layoutY="565.0" text="ID" />
+            <Label layoutX="218.0" layoutY="565.0" text="Нове значення" />
+            <TextField fx:id="updatePeripheryField" layoutX="14.0" layoutY="586.0" prefHeight="31.0" prefWidth="172.0" />
+            <TextField fx:id="periphery_new_value" layoutX="185.0" layoutY="586.0" prefHeight="31.0" prefWidth="177.0" />
+            <Button layoutX="14.0" layoutY="617.0" mnemonicParsing="false" onAction="#updatePeriphery" prefHeight="31.0" prefWidth="347.0" text="Оновити" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

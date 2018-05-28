@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="sample.entity.controllers.addCpuController">
+   <children>
+      <Button layoutX="108.0" layoutY="471.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Подтвердить" />
+      <Button layoutX="235.0" layoutY="471.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Отмена" />
+   </children>
+</AnchorPane>
